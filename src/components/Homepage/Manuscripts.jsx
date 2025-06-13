@@ -6,6 +6,7 @@ import {
 } from "react-simple-captcha";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser"; 
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -48,6 +49,26 @@ function Manuscript() {
     loadCaptchaEnginge(5);
   }, []);
 
+  // EmailJS send function
+  const sendEmail = () => {
+    const templateParams = {
+      service: formData.service,
+      title: formData.title,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      description: formData.description,
+     
+    };
+
+    return emailjs.send(
+      "service_leqcpcg",
+      "template_bqd21eq",
+      templateParams,
+      "LNyTnmDabZbcns92G"
+    );
+  };
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     setFormData((prev) => ({
@@ -80,20 +101,27 @@ function Manuscript() {
     }
 
     if (validateCaptcha(formData.captcha)) {
-      setShowPopup(true);
-      setCaptchaError(null);
-      setFormErrors({});
-      setFormData({
-        service: "",
-        title: "",
-        name: "",
-        email: "",
-        phone: "",
-        description: "",
-        captcha: "",
-        file: null,
-      });
-      loadCaptchaEnginge(5);
+      sendEmail()
+        .then(() => {
+          setShowPopup(true);
+          setCaptchaError(null);
+          setFormErrors({});
+          setFormData({
+            service: "",
+            title: "",
+            name: "",
+            email: "",
+            phone: "",
+            description: "",
+            captcha: "",
+            file: null,
+          });
+          loadCaptchaEnginge(5);
+        })
+        .catch((err) => {
+          console.error("Email sending error:", err);
+          alert("Failed to send email. Please try again later.");
+        });
     } else {
       setCaptchaError("Invalid CAPTCHA. Please try again.");
     }
@@ -111,10 +139,12 @@ function Manuscript() {
         <Helmet>
           <title>Manuscript Upload - Research Assist</title>
         </Helmet>
-        <motion.h1 className="text-center font-bold text-5xl p-12 text-white"
-        initial={{ y: 50, opacity: 0 }}
+        <motion.h1
+          className="text-center font-bold text-5xl p-12 text-white"
+          initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}>
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           Upload Manuscript
         </motion.h1>
       </div>
@@ -172,7 +202,9 @@ function Manuscript() {
               {/* File and Name */}
               <div className="flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[200px]">
-                  <legend className="text-black font-semibold text-xl">Select a file</legend>
+                  <legend className="text-black font-semibold text-xl">
+                    Select a file
+                  </legend>
                   <input
                     type="file"
                     name="file"

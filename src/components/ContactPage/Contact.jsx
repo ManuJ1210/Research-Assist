@@ -9,6 +9,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { RiMailSendFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com'; 
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -21,13 +22,13 @@ const pageTransition = {
   ease: 'easeInOut',
   duration: 0.7,
 };
+
 const cardVariant = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
 function Contact() {
-  // Form state
   const [formData, setFormData] = useState({
     fullName: '',
     subject: '',
@@ -40,33 +41,23 @@ function Contact() {
 
   const [errors, setErrors] = useState({});
   const [isCaptchaValid, setIsCaptchaValid] = useState(null);
-
-  // New state to control modal visibility
   const [showModal, setShowModal] = useState(false);
 
-  // Load captcha on mount
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
 
-  // Input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-
-    // Clear error for this field on input
     setErrors((prev) => ({ ...prev, [name]: null }));
-
     if (name === 'captchaInput') setIsCaptchaValid(null);
   };
 
-  // Simple email validation regex
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  // Validate all fields
   const validateForm = () => {
     const newErrors = {};
-
     if (!formData.fullName.trim()) newErrors.fullName = 'Full Name is required';
     if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
@@ -74,39 +65,60 @@ function Contact() {
     if (!formData.phoneNumber.trim()) newErrors.phoneNumber = 'Phone Number is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     if (!formData.captchaInput.trim()) newErrors.captchaInput = 'CAPTCHA is required';
-
     setErrors(newErrors);
-
     return Object.keys(newErrors).length === 0;
   };
 
-  // Form submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     if (validateCaptcha(formData.captchaInput)) {
       setIsCaptchaValid(true);
 
-      // Show modal instead of alert
-      setShowModal(true);
+      const templateParams = {
+        fullName: formData.fullName,
+        subject: formData.subject,
+        email: formData.email,
+        country: formData.country,
+        phoneNumber: formData.phoneNumber,
+        message: formData.message,
 
-      // Reset form and captcha
-      setFormData({
-        fullName: '',
-        subject: '',
-        email: '',
-        country: 'IN',
-        phoneNumber: '',
-        message: '',
-        captchaInput: '',
-      });
-      loadCaptchaEnginge(6); // Refresh captcha
+        
+      };
+
+      emailjs
+        .send(
+          'service_leqcpcg',    
+          'template_zwm0bcd',    
+          templateParams,
+          'LNyTnmDabZbcns92G'      
+        )
+        .then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setShowModal(true);
+            setFormData({
+              fullName: '',
+              subject: '',
+              email: '',
+              country: 'IN',
+              phoneNumber: '',
+              message: '',
+              captchaInput: '',
+            });
+            loadCaptchaEnginge(6);
+          },
+          (err) => {
+            console.error('FAILED...', err);
+            alert('Message sending failed. Try again later.');
+          }
+        );
     } else {
       setIsCaptchaValid(false);
     }
   };
+
 
   return (
     <motion.div
