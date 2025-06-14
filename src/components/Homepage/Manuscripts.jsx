@@ -202,22 +202,6 @@ function Manuscript() {
               {/* File and Name */}
               <div className="flex flex-wrap gap-4">
                 <div className="flex-1 min-w-[200px]">
-                  <legend className="text-black font-semibold text-xl">
-                    Select a file
-                  </legend>
-                  <input
-                    type="file"
-                    name="file"
-                    onChange={handleChange}
-                    className="file-input w-full focus:outline-blue-600"
-                  />
-                  <label className="label">Max size 10MB</label>
-                  {formErrors.file && (
-                    <p className="text-red-600 text-sm">{formErrors.file}</p>
-                  )}
-                </div>
-
-                <div className="flex-1 min-w-[200px]">
                   <legend className="text-black font-semibold text-xl">Name</legend>
                   <input
                     type="text"
