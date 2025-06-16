@@ -148,7 +148,7 @@ function Manuscript() {
 
       <div className="md:flex md:justify-center mt-5">
         <motion.div
-          className="form  md:w-[80%] md:mt-15 md:px-4 p-6  rounded-2xl border-gray-300 border shadow-2xl"
+          className="form  md:w-[80%] md:mt-15 md:px-4 p-10  rounded-2xl border-gray-300 border shadow-2xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
