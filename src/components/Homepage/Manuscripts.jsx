@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
@@ -38,7 +38,6 @@ function Manuscript() {
     phone: "",
     description: "",
     captcha: "",
-    file: null,
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -92,7 +91,6 @@ function Manuscript() {
     if (!formData.email) errors.email = "Email is required.";
     if (!formData.phone) errors.phone = "Phone is required.";
     if (!formData.description) errors.description = "Description is required.";
-    if (!formData.file) errors.file = "File upload is required.";
     if (!formData.captcha) errors.captcha = "Please enter the CAPTCHA.";
 
     if (Object.keys(errors).length > 0) {
@@ -114,7 +112,6 @@ function Manuscript() {
             phone: "",
             description: "",
             captcha: "",
-            file: null,
           });
           loadCaptchaEnginge(5);
         })
@@ -169,7 +166,7 @@ function Manuscript() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="select w-full focus:outline-blue-600"
+                    className="select w-full focus:outline-blue-600 rounded-lg"
                   >
                     <option value="">Pick a Service</option>
                     <option>English Language Editing</option>
@@ -190,7 +187,7 @@ function Manuscript() {
                     name="title"
                     value={formData.title}
                     onChange={handleChange}
-                    className="input w-full focus:outline-blue-600"
+                    className="input w-full focus:outline-blue-600 rounded-lg"
                     placeholder="Enter the title"
                   />
                   {formErrors.title && (
@@ -208,7 +205,7 @@ function Manuscript() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="input w-full focus:outline-blue-600"
+                    className="input w-full focus:outline-blue-600 rounded-lg"
                     placeholder="Enter your name..."
                   />
                   {formErrors.name && (
@@ -226,7 +223,7 @@ function Manuscript() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="input w-full focus:outline-blue-600"
+                    className="input w-full focus:outline-blue-600 rounded-lg"
                     placeholder="Enter your email..."
                   />
                   {formErrors.email && (
@@ -241,7 +238,7 @@ function Manuscript() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="input w-full focus:outline-blue-600"
+                    className="input w-full focus:outline-blue-600 rounded-lg"
                     placeholder="Phone"
                     maxLength="10"
                   />
@@ -258,7 +255,7 @@ function Manuscript() {
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
-                  className="textarea w-full focus:outline-blue-600"
+                  className="textarea w-full focus:outline-blue-600 rounded-lg"
                   placeholder="Enter the Description"
                 />
                 {formErrors.description && (
@@ -274,7 +271,7 @@ function Manuscript() {
                   name="captcha"
                   value={formData.captcha}
                   onChange={handleChange}
-                  className="input mt-2 w-full focus:outline-blue-600"
+                  className="input mt-2 w-full focus:outline-blue-600 rounded-lg"
                   placeholder="Enter CAPTCHA"
                 />
                 {captchaError && (
@@ -287,12 +284,14 @@ function Manuscript() {
             </fieldset>
 
             {/* Submit button */}
+            <div className="mt-6 mx-auto text-center ">
             <button
               type="submit"
-              className="btn text-white w-[50%] bg-[#1A77F2] hover:bg-blue-900 mt-4 lg:ml-75 md:ml-35 sm:ml-70"
+              className="max-w-2xl rounded-md bg-blue-600 px-4 py-2 text-white text-sm font-semibold hover:bg-blue-900 focus:outline-blue-600"
             >
               Upload
             </button>
+            </div>
           </form>
         </motion.div>
       </div>

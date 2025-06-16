@@ -43,40 +43,6 @@ function About() {
         </motion.h1>
         </div>
 
-        {/* Cards Section */}
-        <motion.div
-          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-4 md:px-10 lg:px-16 cursor-pointer content-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.20
-              }
-            }
-          }}
-        >
-          {[
-            { title: "Established 2002", desc: "Founded by renowned rheumatologist Dr. Chandrashekara S., pioneering specialized care in India." },
-            { title: "Specialized Care", desc: "One-of-its-kind hospital dedicated to rheumatic and immunological diseases management." },
-            { title: "Academic Excellence", desc: "Offering fellowship programs with numerous publications in international journals." },
-            { title: "Research Focus", desc: "Dedicated research wing conducting clinical trials and basic research." }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="card w-full bg-base-100 card-sm border border-gray-300 shadow-lg"
-              variants={cardVariant}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="card-body">
-                <h2 className="card-title">{item.title}</h2>
-                <p>{item.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Image + Text Section */}
         <motion.div

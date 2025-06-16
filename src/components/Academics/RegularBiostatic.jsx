@@ -46,7 +46,7 @@ function RegularBiostatic() {
             <p className=" mt-2 md:text-clip md:text-pretty text-start text-lg/8 pr-20 text-gray-600">For any queries contact us on +91 9535056289, +91 7618775276</p>
             <p className=" mt-2 md:text-clip text-pretty text-start text-lg/8 pr-20 text-gray-600">Please choose whether you are a student or factulty. After choosing you will get a payment form once you are done with payment you will get the registration link</p>
           </div>
-          <div className="md:pr-30 border mt-10 border-gray-300  shadow-2xl w-70 h-100 mr-50 ">
+          <div className="md:pr-30 border mt-10 border-gray-300  shadow-md w-70 h-100 mr-50 ">
 
             <h1 className="mt-4 md:text-center font-bold text-2xl w-50 mb-5 text-black ml-9 ">Other Links</h1>
             <ul className="md:flex flex-wrap w-60  md:text-clip text-pretty ml-16 text-lg/9  text-gray-600  ">

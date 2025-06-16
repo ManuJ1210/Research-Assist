@@ -159,7 +159,7 @@ function Contact() {
           }}
         >
           <motion.div
-            className="card w-full bg-gray-200 border border-gray-300 shadow-2xl"
+            className="card w-full  border border-gray-300 shadow-md"
             variants={cardVariant}
             transition={{ duration: 0.5 }}
           >
@@ -176,7 +176,7 @@ function Contact() {
           </motion.div>
 
           <motion.div
-            className="card w-full bg-gray-200 border border-gray-300  shadow-2xl"
+            className="card w-full  border border-gray-300  shadow-md"
             variants={cardVariant}
             transition={{ duration: 0.5 }}
           >
@@ -190,7 +190,7 @@ function Contact() {
           </motion.div>
 
           <motion.div
-            className="card w-full bg-gray-200  border border-gray-300 shadow-2xl"
+            className="card w-full   border border-gray-300 shadow-md"
             variants={cardVariant}
             transition={{ duration: 0.5 }}
           >
@@ -207,7 +207,7 @@ function Contact() {
         {/* Form & Map Section */}
         <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-10 lg:px-16 mt-20 mb-30">
           {/* Map - hidden on small screens */}
-          <div className="hidden lg:block lg:w-1/2 h-[660px] border border-gray-300  shadow-2xl">
+          <div className="hidden lg:block lg:w-1/2 rounded-lg border border-gray-300  shadow-md">
             <iframe
               title="Company Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.571850394237!2d77.5502906!3d12.9992138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dbc8be6ee1f%3A0x99d77f3579e9ed2e!2sChanRe%20Rheumatology%20And%20Immunology%20Center%20And%20Research!5e0!3m2!1sen!2sin!4v1749614914180!5m2!1sen!2sin"
@@ -224,7 +224,7 @@ function Contact() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="w-full lg:w-1/2 p-4  rounded-md border border-gray-300  shadow-2xl  max-h-[660px] "
+            className="w-full lg:w-1/2 p-8  rounded-lg border border-gray-300  shadow-md  "
           >
             <div className="grid grid-cols-1 gap-y-4">
               <div>
@@ -381,10 +381,10 @@ function Contact() {
               </div>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 mx-auto text-center ">
               <button
                 type="submit"
-                className="w-full rounded-md bg-blue-600 px-4 py-2 text-white text-sm font-semibold hover:bg-blue-900 focus:outline-blue-600"
+                className="max-w-md  rounded-md bg-blue-600 px-4 py-2 text-white text-sm font-semibold hover:bg-blue-900 focus:outline-blue-600"
               >
                 Send Message
               </button>

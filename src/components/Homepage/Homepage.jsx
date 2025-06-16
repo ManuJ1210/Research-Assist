@@ -168,7 +168,7 @@ function Homepage() {
   ].map((card, i) => (
     <Link key={i} to={card.to} className="h-full">
       <motion.div
-        className="card card-dash bg-base-100 w-full h-full flex flex-col justify-between rounded-md border border-gray-300  hover:scale-105 transition duration-300 shadow-2xl"
+        className="card card-dash bg-base-100 w-full h-full flex flex-col justify-between rounded-md border border-gray-300  hover:scale-105 transition duration-300 shadow-md"
         variants={cardVariant}
         transition={{ duration: 0.5 }}
       >

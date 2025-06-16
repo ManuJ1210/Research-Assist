@@ -72,7 +72,7 @@ function ClinicalDesign() {
 
 
                     <motion.div
-                        className="md:pr-45 border border-gray-300  shadow-2xl mt-10 w-75 h-100 mr-50 "
+                        className="md:pr-45 border border-gray-300  shadow-md mt-10 w-75 h-100 mr-50 "
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

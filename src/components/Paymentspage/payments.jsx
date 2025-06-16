@@ -47,7 +47,7 @@ function Payments() {
 
 
         <div className="max-w-screen-lg mx-auto px-4 py-6 space-y-8 mt-10">
-          <motion.div className="bg-gray-100 rounded-md border border-gray-300 p-6 shadow-2xl"
+          <motion.div className=" rounded-md border border-gray-300 p-6 shadow-md"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -59,7 +59,7 @@ function Payments() {
           </motion.div>
 
 
-          <motion.div className="bg-gray-100 rounded-md border border-gray-300 p-6 shadow-2xl"
+          <motion.div className=" rounded-md border border-gray-300 p-6 shadow-md"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -84,7 +84,7 @@ function Payments() {
           </motion.div>
 
 
-          <motion.div className="bg-gray-100 rounded-md border border-gray-300 p-6 shadow-2xl"
+          <motion.div className=" rounded-md border border-gray-300 p-6 shadow-md"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

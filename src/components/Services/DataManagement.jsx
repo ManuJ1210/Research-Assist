@@ -75,7 +75,7 @@ function DataManagement() {
 
 
                 <motion.div
-                    className="md:pr-45 border mt-10 w-75 h-100 mr-50 border-gray-300  shadow-2xl"
+                    className="md:pr-45 border mt-10 w-75 h-100 mr-50 border-gray-300  shadow-md"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
