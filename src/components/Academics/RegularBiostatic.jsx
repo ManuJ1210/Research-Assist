@@ -51,16 +51,16 @@ function RegularBiostatic() {
             <h1 className="mt-4 md:text-center font-bold text-2xl w-50 mb-5 text-black ml-9 ">Other Links</h1>
             <ul className="md:flex flex-wrap w-60  md:text-clip text-pretty ml-16 text-lg/9  text-gray-600  ">
 
-              <Link to="/english"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Manuscript Editing</li></Link>
-              <Link to="/research"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">
+              <Link to="/english"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Manuscript Editing</li></Link>
+              <Link to="/research"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">
                 Research  Designing</li></Link>
-              <Link to="/manuscriptEditing"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Manuscript Editing</li></Link>
-              <Link to="/manuscriptWriting"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Manuscript Writing</li></Link>
-              <Link to="/clinicalDesign"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Clinical Trail Designing</li></Link>
-              <Link to="/figurePreparation"><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Figure Prepration</li></Link>
-              <Link to="/dataManagement"><li className="w-1/1 list-disc hover:scale-105 transition duration-350"> Data Management</li></Link>
-              <Link to=""><li className="w-1/1 list-disc hover:scale-105 transition duration-350"> Utility & Tools</li></Link>
-              <Link to=""><li className="w-1/1 list-disc hover:scale-105 transition duration-350">Preview Demo</li></Link>
+              <Link to="/manuscriptEditing"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Manuscript Editing</li></Link>
+              <Link to="/manuscriptWriting"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Manuscript Writing</li></Link>
+              <Link to="/clinicalDesign"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Clinical Trail Designing</li></Link>
+              <Link to="/figurePreparation"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Figure Prepration</li></Link>
+              <Link to="/dataManagement"><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 "> Data Management</li></Link>
+              <Link to=""><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 "> Utility & Tools</li></Link>
+              <Link to=""><li className="w-1/1 list-disc hover:scale-105 transition duration-350  hover:text-blue-600 ">Preview Demo</li></Link>
             </ul>
           </div>
 

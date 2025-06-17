@@ -57,43 +57,65 @@ function Header() {
   return (
     <>
       {/* Header top */}
-      <div className="header-top z-50 bg-blue-900 py-5 md:h-12 md:items-center hidden min-[1184px]:flex md:justify-between px-8 text-white">
-        <div className="md:flex gap-10 md:w-1/2 md:col-span-2">
-          <p>
-            <a
-              href="https://maps.app.goo.gl/hxHdDUJHLUdRmj4m6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="md:flex md:items-center gap-1 font-medium"
-            >
-              <FaLocationDot />
-              1st Block, Rajajinagar, Bangalore
-            </a>
-          </p>
-          <p>
-            <Link to="/contact" className="md:flex items-center gap-1 font-medium">
-              <IoIosMail />
-              marketing@research-assist.com
-            </Link>
-          </p>
-        </div>
+      <div className="header-top z-50 bg-blue-900 py-3 px-6 text-white hidden min-[1184px]:flex items-center justify-between">
+  
+  <div className="flex items-center gap-10 flex-wrap">
+    <a
+      href="https://maps.app.goo.gl/hxHdDUJHLUdRmj4m6"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-sm font-medium hover:underline"
+    >
+      <FaLocationDot className="text-lg" />
+      1st Block, Rajajinagar, Bangalore
+    </a>
+    <Link
+      to="/contact"
+      className="flex items-center gap-2 text-md font-medium hover:underline"
+    >
+      <IoIosMail className="text-lg" />
+      marketing@research-assist.com
+    </Link>
+  </div>
 
-        <h4 className="footer-title text-white md:ml-130 items-center align-middle">Follow Us:</h4>
-        <div className="flex justify-between gap-3 text-white">
-          <a href="https://www.facebook.com/ChanRericr/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 hover:scale-110 transition duration-300">
-            <FaFacebookF />
-          </a>
-          <a href="https://in.linkedin.com/company/chanre-rheumatology-&-immunology-center-&-research" target="_blank" rel="noopener noreferrer" className="hover:text-black">
-            <FaLinkedinIn />
-          </a>
-          <a href="https://www.youtube.com/user/chanre1" target="_blank" rel="noopener noreferrer" className="hover:text-red-600">
-            <FaYoutube />
-          </a>
-          <a href="https://twitter.com/ChanreCenter?t=aCWSkO9R7XsQNm2hlJ6s2g&s=09" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
-            <FaTwitter />
-          </a>
-        </div>
-      </div>
+
+  <div className="flex items-center gap-3  mr-20">
+    <h4 className="text-md font-semibold">Follow Us :</h4>
+    <a
+      href="https://www.facebook.com/ChanRericr/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-400 hover:scale-110 transition"
+    >
+      <FaFacebookF />
+    </a>
+    <a
+      href="https://in.linkedin.com/company/chanre-rheumatology-&-immunology-center-&-research"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-300 hover:scale-110 transition"
+    >
+      <FaLinkedinIn />
+    </a>
+    <a
+      href="https://www.youtube.com/user/chanre1"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-red-500 hover:scale-110 transition"
+    >
+      <FaYoutube />
+    </a>
+    <a
+      href="https://twitter.com/ChanreCenter?t=aCWSkO9R7XsQNm2hlJ6s2g&s=09"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-500 hover:scale-110 transition"
+    >
+      <FaTwitter />
+    </a>
+  </div>
+</div>
+
 
       {/* Navbar */}
       <nav className="sticky  top-0 bg-white shadow-lg z-80">
