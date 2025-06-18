@@ -57,15 +57,15 @@ function About() {
             />
           </div>
 
-          <div className="md:w-3/5 md:py-15 mt-10 ">
+          <div className="md:w-3/5 md:py-15 mt-10 text-justify md:px-10 px-5">
             <h1 className="md:text-start font-bold text-3xl mb-5 text-black">Welcome to Research-Assist</h1>
-            <p className="mt-3 font-semibold text-start text-gray-700">
+            <p className="mt-3 font-semibold  text-gray-700 text-justify">
              Welcome to research-assist, your online partner providing end-to-end solution for publishing manuscript and scientific contents. Our team comprises of statistical analysts, medical specialists, research professionals and IT experts with years of experience in editorial process management and scientific publishing. Our motto is to provide excellent service, without compromising on the quality or accuracy.
             </p>
-            <p className="mt-3 font-semibold text-start text-gray-700">
+            <p className="mt-3 font-semibold text-justify text-gray-700 ">
             Meticulous statistical analysis, data interpretation,and presentation of the content are crucial for establishing the success of a research. Our knowledge resources can meet your research needs, thereby to help you in achieving the publication goals. We hope to serve you at the best through the various services offered.
             </p>
-            <p className="mt-3 font-semibold text-start text-gray-700">
+            <p className="mt-3 font-semibold text-justify text-gray-700 ">
             We comply with ethical publication practices and strive to provide the best services by understanding the customer needs. We cater to various global, academic, scientific and pharma giants to provide high-quality services
             </p>
           </div>

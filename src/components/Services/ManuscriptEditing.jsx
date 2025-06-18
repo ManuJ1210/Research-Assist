@@ -47,7 +47,7 @@ function ManuscriptEditing() {
                 <div className="md:flex md:justify-evenly mt-15">
                     {/* Left Section */}
                     <motion.div
-                        className="md:px-20 md:w-3/5"
+                        className="md:px-20 md:w-3/5 text-justify px-5"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

@@ -43,9 +43,9 @@ function FigurePreparation() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }} >Figure Preparation and Editorial Assistance</motion.h1>
                 </div>
-                <div className="md:flex md:justify-evenly mt-15">
+                <div className="md:flex md:justify-evenly mt-15 ">
                     <motion.div
-                        className="md:px-20 md:w-3/5"
+                        className="md:px-20 md:w-3/5 text-justify px-5"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

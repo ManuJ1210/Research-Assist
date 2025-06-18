@@ -46,14 +46,14 @@ function ClinicalDesign() {
                 </div>
                 <div className="md:flex md:justify-evenly mt-15">
                     <motion.div
-                        className="md:px-20 md:w-3/5"
+                        className="md:px-20 md:w-3/5 text-justify  px-5"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
                     >
                         <h1 className="text-start font-bold text-3xl md:content-between mb-5 mt-8 text-black">Clinical trial design & documentation - Research-Assist</h1>
-                        <p className=" mt-2 md:text-clip text-pretty text-start text-lg/8 pr-20 text-gray-600">We offer clinical trial design services from concept to report.Our experts take up preparation of all types of documents pertaining to a clinical study,pre-submission proposal to post-clinical research reports and appendices according to the ICH guidelines.</p>
+                        <p className=" mt-2 md:text-clip text-pretty text-justify text-lg/8 pr-20 text-gray-600">We offer clinical trial design services from concept to report.Our experts take up preparation of all types of documents pertaining to a clinical study,pre-submission proposal to post-clinical research reports and appendices according to the ICH guidelines.</p>
 
                         <h1 className="mt-10 text-start font-bold text-3xl content-between mb-5 text-black">Pre-submission</h1>
                         <ul className="px-6  mt-2 md:text-clip text-pretty text-start text-lg/8 mb-16 text-gray-600">
